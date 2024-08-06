@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-599ESDK9N1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-599ESDK9N1');
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -158,13 +149,15 @@
         margin-top: 2rem;
       }
 
-      #references a {
+      #references a,
+      footer a {
         color: var(--white);
         text-decoration: none;
         transition: all 0.3s ease;
       }
 
-      #references a:hover {
+      #references a:hover,
+      footer a:hover {
         color: var(--bitcoin-orange);
       }
 
@@ -300,9 +293,16 @@
     <footer>
       <div class="container">
         <p>
-          &copy; 2024 Staunton Bitcoin Alliance. All rights reserved. Powered by digital gold!
+          <span style="color:#ff9900">Contribute to our cause:</span>
+          <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un">bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un</a></p>
+          <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un"><img width="240" src="images/sva-btc-qr.png" alt="Bitcoin QR Code" /></a>
         </p>
+        <p>&copy; <span id="current-year">2024</span> Staunton Bitcoin Alliance. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
