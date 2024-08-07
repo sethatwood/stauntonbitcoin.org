@@ -161,6 +161,87 @@
         color: var(--bitcoin-orange);
       }
 
+      #faq {
+        background-color: var(--light-gray);
+        padding: 2rem;
+        border-radius: 15px;
+        margin-top: 2rem;
+        color: var(--dark-blue);
+      }
+    
+      #faq h2 {
+        color: var(--dark-blue);
+        border-bottom: 2px solid var(--bitcoin-orange);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      .faq-item {
+        margin-bottom: 1.5rem;
+      }
+    
+      .faq-item h3 {
+        color: var(--bitcoin-orange);
+        margin-bottom: 0.5rem;
+      }
+    
+      .faq-item p {
+        font-size: 1rem;
+      }
+
+      footer {
+        background-color: var(--dark-blue);
+        color: var(--white);
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 2rem;
+      }
+    
+      footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .bitcoin-address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+    
+      .bitcoin-label {
+        color: var(--bitcoin-orange);
+        margin-bottom: 0.5rem;
+        font-size: calc(0.8rem + 0.5vw);
+      }
+    
+      .address-link {
+        color: var(--white);
+        text-decoration: none;
+        font-size: calc(0.7rem + 0.7vw);
+        word-break: break-all;
+        max-width: 100%;
+        line-height: 1.4;
+      }
+    
+      .qr-link {
+        margin-bottom: 1rem;
+      }
+    
+      .qr-link img {
+        max-width: 100%;
+        height: auto;
+        width: min(240px, 60vw);
+      }
+    
+      @media (min-width: 1200px) {
+        .address-link {
+          font-size: 1.2rem;
+        }
+      }
+
       @media (max-width: 768px) {
         .hero h1 {
           font-size: 2.5rem;
@@ -279,6 +360,35 @@
         </p>
       </section>
 
+      <section id="faq" class="container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <h3>Why Staunton?</h3>
+          <p>Staunton, with its rich history and vibrant culture, is the perfect backdrop for a Bitcoin revolution. Home to the world-renowned American Shakespeare Center's Blackfriars Playhouse, Staunton embodies a unique blend of tradition and innovation. Our small but engaged civic population fosters a strong sense of community, ideal for grassroots movements like the Bitcoin Alliance. Moreover, Staunton's city motto, "Moderata Durant" (Moderation is Lasting), aligns beautifully with Bitcoin's principles of steady, sustainable growth and long-term value preservation. By embracing Bitcoin, Staunton continues its legacy of balancing historical significance with forward-thinking progress.</p>
+        </div>
+      
+        <div class="faq-item">
+          <h3>What is Bitcoin?</h3>
+          <p>Bitcoin is a decentralized digital currency that enables instant payments to anyone, anywhere in the world. It operates on a peer-to-peer network without the need for intermediaries, using blockchain technology to secure and verify all transactions.</p>
+        </div>
+      
+        <div class="faq-item">
+          <h3>How can I start using Bitcoin in Staunton?</h3>
+          <p>To start using Bitcoin in Staunton, you can attend one of our educational workshops to learn the basics, set up a digital wallet, and discover local businesses that accept Bitcoin. You can also join our community events to connect with other Bitcoin enthusiasts in the area.</p>
+        </div>
+      
+        <div class="faq-item">
+          <h3>How will Bitcoin benefit Staunton's economy?</h3>
+          <p>Bitcoin adoption can stimulate Staunton's economy by attracting tech-savvy tourists and businesses, reducing transaction fees for local merchants, and positioning Staunton as a hub for financial innovation. It also has the potential to enhance the city's treasury management and create new job opportunities in the blockchain sector.</p>
+        </div>
+      
+        <div class="faq-item">
+          <h3>Is Bitcoin safe and legal?</h3>
+          <p>Bitcoin is legal in the United States and is becoming increasingly regulated. While it's a secure system by design, users must take precautions to protect their digital assets, much like with traditional financial instruments. The Staunton Bitcoin Alliance is committed to providing education on best practices for safe Bitcoin usage.</p>
+        </div>
+      </section>
+
       <section id="contact" class="container">
         <h2>Join the Alliance!</h2>
         <p>
@@ -292,11 +402,13 @@
 
     <footer>
       <div class="container">
-        <p>
-          <span style="color:#ff9900">Contribute to our cause:</span>
-          <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un">bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un</a></p>
-          <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un"><img width="240" src="images/sva-btc-qr.png" alt="Bitcoin QR Code" /></a>
+        <p class="bitcoin-address">
+          <span class="bitcoin-label">Contribute to our cause:</span>
+          <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un" class="address-link">bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un</a>
         </p>
+        <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un" class="qr-link">
+          <img width="240" src="images/sva-btc-qr.png" alt="Bitcoin QR Code" />
+        </a>
         <p>&copy; <span id="current-year">2024</span> Staunton Bitcoin Alliance. All rights reserved.</p>
       </div>
     </footer>
