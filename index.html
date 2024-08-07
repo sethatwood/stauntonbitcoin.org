@@ -1,263 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Staunton Bitcoin Alliance: A Peer-to-Peer Electronic Cash System for Local Adoption
-    </title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
 
-      :root {
-        --bitcoin-orange: #ff9900;
-        --dark-blue: #05283c;
-        --light-gray: #f4f4f4;
-        --white: #ffffff;
-        --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Staunton Bitcoin Alliance: A Peer-to-Peer Electronic Cash System for Local Adoption
+  </title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+    :root {
+      --bitcoin-orange: #ff9900;
+      --dark-blue: #05283c;
+      --light-gray: #f4f4f4;
+      --white: #ffffff;
+      --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.6;
+      color: var(--dark-blue);
+      background-color: var(--dark-blue);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 1rem 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bitcoin-orange) 0%, #ffd700 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 6rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1,
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: var(--text-shadow);
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: var(--text-shadow);
+    }
+
+    .logo-container {
+      margin-bottom: 2rem;
+    }
+
+    .bitcoin-logo {
+      width: 160px;
+      height: 160px;
+    }
+
+    #abstract,
+    #introduction,
+    #pillars,
+    #network-effects,
+    #privacy-security,
+    #incentives,
+    #municipal-treasury,
+    #scalability,
+    #vision,
+    #conclusion,
+    #references {
+      color: var(--white);
+      margin-bottom: 2rem;
+    }
+
+    .container h2 {
+      color: var(--white);
+      border-bottom: 2px solid var(--bitcoin-orange);
+      padding-bottom: 0.5rem;
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--white);
+      color: var(--bitcoin-orange);
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background-color: var(--light-gray);
+      color: var(--dark-blue);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #contact {
+      background-color: var(--light-gray);
+      color: var(--dark-blue);
+      text-align: center;
+      padding: 4rem;
+      border-radius: 15px;
+      margin-top: 2rem;
+    }
+
+    #contact h2 {
+      color: var(--dark-blue);
+    }
+
+    #contact p {
+      margin-bottom: 2rem;
+    }
+
+    #faq {
+      background-color: var(--light-gray);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-top: 2rem;
+      color: var(--dark-blue);
+    }
+
+    #faq h2 {
+      color: var(--dark-blue);
+      border-bottom: 2px solid var(--bitcoin-orange);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item h3 {
+      color: var(--bitcoin-orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item p {
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: var(--dark-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    footer .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bitcoin-address {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .bitcoin-label {
+      color: var(--bitcoin-orange);
+      margin-bottom: 0.5rem;
+      font-size: calc(0.8rem + 0.5vw);
+    }
+
+    .address-link {
+      color: var(--white);
+      text-decoration: none;
+      font-size: calc(0.7rem + 0.7vw);
+      word-break: break-all;
+      max-width: 100%;
+      line-height: 1.4;
+    }
+
+    .qr-link {
+      margin-bottom: 1rem;
+    }
+
+    .qr-link img {
+      max-width: 100%;
+      height: auto;
+      width: min(240px, 60vw);
+    }
+
+    #references a,
+    footer a {
+      color: var(--white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    #references a:hover,
+    footer a:hover {
+      color: var(--bitcoin-orange);
+    }
+
+    @media (min-width: 1200px) {
+      .address-link {
+        font-size: 1.2rem;
       }
+    }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Montserrat", sans-serif;
-        line-height: 1.6;
-        color: var(--dark-blue);
-        background-color: var(--dark-blue);
-      }
-
-      .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      section {
-        padding: 1rem 0;
-      }
-
-      h1, h2, h3, h4 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-weight: 800;
-      }
-
-      .hero {
-        background: linear-gradient(
-          135deg,
-          var(--bitcoin-orange) 0%,
-          #ffd700 100%
-        );
-        color: var(--white);
-        text-align: center;
-        padding: 6rem 0;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero::before {
-        content: "₿";
-        position: absolute;
-        font-size: 40rem;
-        opacity: 0.1;
-        top: -100px;
-        right: -100px;
-        transform: rotate(-15deg);
-      }
-
-      .hero h1,
-      .hero h2 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        text-shadow: var(--text-shadow);
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-        font-weight: 600;
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
       }
 
       .hero p {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        text-shadow: var(--text-shadow);
+        font-size: 1.2rem;
       }
 
-      #abstract, #introduction, #pillars, #network-effects, #privacy-security, #incentives, #municipal-treasury, #scalability, #vision, #conclusion, #references {
-        color: var(--white);
-        margin-bottom: 2rem;
+      .bitcoin-logo {
+        width: 160px;
+        height: 160px;
       }
+    }
+  </style>
+</head>
 
-      .container h2 {
-        color: var(--white);
-        border-bottom: 2px solid var(--bitcoin-orange);
-        padding-bottom: 0.5rem;
-      }
-
-      .container p {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-      }
-
-      .btn {
-        display: inline-block;
-        background-color: var(--white);
-        color: var(--bitcoin-orange);
-        padding: 0.75rem 1.5rem;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .btn:hover {
-        background-color: var(--light-gray);
-        color: var(--dark-blue);
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-      }
-
-      #contact {
-        background-color: var(--light-gray);
-        color: var(--dark-blue);
-        text-align: center;
-        padding: 4rem;
-        border-radius: 15px;
-        margin-top: 2rem;
-      }
-
-      #contact h2 {
-        color: var(--dark-blue);
-      }
-
-      #contact p {
-        margin-bottom: 2rem;
-      }
-
-      footer {
-        background-color: var(--dark-blue);
-        color: var(--white);
-        text-align: center;
-        padding: 2rem 0;
-        margin-top: 2rem;
-      }
-
-      #references a,
-      footer a {
-        color: var(--white);
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      #references a:hover,
-      footer a:hover {
-        color: var(--bitcoin-orange);
-      }
-
-      #faq {
-        background-color: var(--light-gray);
-        padding: 2rem;
-        border-radius: 15px;
-        margin-top: 2rem;
-        color: var(--dark-blue);
-      }
-    
-      #faq h2 {
-        color: var(--dark-blue);
-        border-bottom: 2px solid var(--bitcoin-orange);
-        padding-bottom: 0.5rem;
-        margin-bottom: 1.5rem;
-      }
-    
-      .faq-item {
-        margin-bottom: 1.5rem;
-      }
-    
-      .faq-item h3 {
-        color: var(--bitcoin-orange);
-        margin-bottom: 0.5rem;
-      }
-    
-      .faq-item p {
-        font-size: 1rem;
-      }
-
-      footer {
-        background-color: var(--dark-blue);
-        color: var(--white);
-        text-align: center;
-        padding: 2rem 0;
-        margin-top: 2rem;
-      }
-    
-      footer .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .bitcoin-address {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 1rem;
-        width: 100%;
-      }
-    
-      .bitcoin-label {
-        color: var(--bitcoin-orange);
-        margin-bottom: 0.5rem;
-        font-size: calc(0.8rem + 0.5vw);
-      }
-    
-      .address-link {
-        color: var(--white);
-        text-decoration: none;
-        font-size: calc(0.7rem + 0.7vw);
-        word-break: break-all;
-        max-width: 100%;
-        line-height: 1.4;
-      }
-    
-      .qr-link {
-        margin-bottom: 1rem;
-      }
-    
-      .qr-link img {
-        max-width: 100%;
-        height: auto;
-        width: min(240px, 60vw);
-      }
-    
-      @media (min-width: 1200px) {
-        .address-link {
-          font-size: 1.2rem;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .hero p {
-          font-size: 1.2rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <main>
-      <section class="hero">
-        <div class="container">
+<body>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <img src="images/bitcoin-logo.png" alt="Bitcoin Logo" class="bitcoin-logo">
           <h1>Staunton Bitcoin Alliance</h1>
           <h2>A Peer-to-Peer Electronic Cash System for Local Adoption</h2>
           <p>
@@ -265,156 +273,204 @@
           </p>
           <a href="#contact" class="btn">Join the Alliance</a>
         </div>
-      </section>
-
-      <section id="abstract" class="container">
-        <h2>Abstract</h2>
-        <p>
-          The Staunton Bitcoin Alliance proposes a system for widespread Bitcoin adoption in Staunton, Virginia, leveraging the existing peer-to-peer electronic cash system to create a localized economy powered by digital gold. This initiative outlines the structure of the alliance and its three-pillar approach to integrating Bitcoin into the fabric of Staunton's economic and social systems.
-        </p>
-      </section>
-
-      <section id="introduction" class="container">
-        <h2>1. Introduction</h2>
-        <p>
-          Bitcoin has emerged as a revolutionary form of digital currency, offering financial sovereignty and economic efficiency. The Staunton Bitcoin Alliance aims to harness these benefits at a local level, transforming Staunton into a beacon of Bitcoin innovation and adoption.
-        </p>
-      </section>
-
-      <section id="pillars" class="container">
-        <h2>2. The Three Pillars</h2>
-        <p>Our approach is based on three interconnected pillars:</p>
-        <h3>2.1 Citizens</h3>
-        <p>
-          We propose a robust educational framework to empower Staunton's residents with Bitcoin knowledge and skills. This includes regular workshops and seminars, practical training on wallet management and transactions, and community events to foster a local Bitcoin ecosystem.
-        </p>
-        <h3>2.2 Businesses</h3>
-        <p>
-          To catalyze Bitcoin adoption in the commercial sector, we outline integration strategies for local businesses, point-of-sale solutions for Bitcoin transactions, and marketing support for Bitcoin-friendly establishments.
-        </p>
-        <h3>2.3 Government</h3>
-        <p>
-          Our plan for governmental integration includes educational programs for city officials, exploration of Bitcoin for municipal treasury management, and development of Bitcoin-friendly local regulations.
-        </p>
-      </section>
-
-      <section id="network-effects" class="container">
-        <h2>3. Network Effects</h2>
-        <p>
-          We posit that the synergy between these three pillars will create powerful network effects, accelerating Bitcoin adoption throughout Staunton.
-        </p>
-      </section>
-
-      <section id="privacy-security" class="container">
-        <h2>4. Privacy and Security</h2>
-        <p>
-          Leveraging Bitcoin's inherent security features, we propose additional measures to ensure the privacy and security of Staunton's Bitcoin ecosystem.
-        </p>
-      </section>
-
-      <section id="incentives" class="container">
-        <h2>5. Incentives</h2>
-        <p>
-          We outline a system of incentives to encourage Bitcoin adoption, including discounts for Bitcoin transactions at local businesses, rewards for citizen participation in educational programs, and recognition for businesses and government entities leading in Bitcoin adoption.
-        </p>
-      </section>
-
-      <section id="municipal-treasury" class="container">
-        <h2>6. Municipal Bitcoin Treasury</h2>
-        <p>
-          We propose the integration of Bitcoin into Staunton's municipal treasury. This bold move would position Staunton as a pioneer in governmental Bitcoin adoption, potentially leading to more efficient financial management and increased economic opportunities for the city.
-        </p>
-      </section>
-
-      <section id="scalability" class="container">
-        <h2>7. Scalability</h2>
-        <p>
-          Our model is designed to be scalable, potentially serving as a blueprint for other municipalities seeking to embrace Bitcoin.
-        </p>
-      </section>
-
-      <section id="vision" class="container">
-        <h2>8. Vision: Staunton as a Bitcoin Beacon</h2>
-        <p>
-          Imagine Staunton in 2030: A vibrant, economically thriving city where Bitcoin is seamlessly integrated into daily life. The historic downtown buzzes with activity as tourists and locals alike use Bitcoin to shop, dine, and enjoy cultural events. The Blackfriars Playhouse now accepts Bitcoin for tickets, attracting a new generation of tech-savvy Shakespeare enthusiasts.
-        </p>
-        <p>
-          Local businesses flourish, free from the burden of high transaction fees. The Staunton Farmers' Market has become a model of peer-to-peer commerce, with farmers and artisans accepting Bitcoin directly from customers. The city's Innovation Hub has become a nationally recognized center for blockchain technology, attracting startups and creating high-paying jobs.
-        </p>
-        <p>
-          Staunton's municipal services run more efficiently than ever, powered by Bitcoin's transparent and secure network. The city's Bitcoin treasury has grown, funding improvements in infrastructure and education without raising taxes. Staunton has become a beacon of financial innovation, drawing visitors and new residents from across the country who are eager to be part of this ground-breaking experiment in local Bitcoin adoption.
-        </p>
-      </section>
-
-      <section id="conclusion" class="container">
-        <h2>9. Conclusion</h2>
-        <p>
-          The Staunton Bitcoin Alliance presents a comprehensive approach to local Bitcoin adoption, aiming to position Staunton as a leader in the ongoing financial revolution. By embracing this innovative technology, we have the opportunity to create a more prosperous, efficient, and forward-thinking community for generations to come.
-        </p>
-      </section>
-
-      <section id="references" class="container">
-        <h2>References</h2>
-        <p>
-          1. Nakamoto, S. (2008). <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Bitcoin: A Peer-to-Peer Electronic Cash System.</a>
-        </p>
-      </section>
-
-      <section id="faq" class="container">
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq-item">
-          <h3>Why Staunton?</h3>
-          <p>Staunton, with its rich history and vibrant culture, is the perfect backdrop for a Bitcoin revolution. Home to the world-renowned American Shakespeare Center's Blackfriars Playhouse, Staunton embodies a unique blend of tradition and innovation. Our small but engaged civic population fosters a strong sense of community, ideal for grassroots movements like the Bitcoin Alliance. Moreover, Staunton's city motto, "Moderata Durant" (Moderation is Lasting), aligns beautifully with Bitcoin's principles of steady, sustainable growth and long-term value preservation. By embracing Bitcoin, Staunton continues its legacy of balancing historical significance with forward-thinking progress.</p>
-        </div>
-      
-        <div class="faq-item">
-          <h3>What is Bitcoin?</h3>
-          <p>Bitcoin is a decentralized digital currency that enables instant payments to anyone, anywhere in the world. It operates on a peer-to-peer network without the need for intermediaries, using blockchain technology to secure and verify all transactions.</p>
-        </div>
-      
-        <div class="faq-item">
-          <h3>How can I start using Bitcoin in Staunton?</h3>
-          <p>To start using Bitcoin in Staunton, you can attend one of our educational workshops to learn the basics, set up a digital wallet, and discover local businesses that accept Bitcoin. You can also join our community events to connect with other Bitcoin enthusiasts in the area.</p>
-        </div>
-      
-        <div class="faq-item">
-          <h3>How will Bitcoin benefit Staunton's economy?</h3>
-          <p>Bitcoin adoption can stimulate Staunton's economy by attracting tech-savvy tourists and businesses, reducing transaction fees for local merchants, and positioning Staunton as a hub for financial innovation. It also has the potential to enhance the city's treasury management and create new job opportunities in the blockchain sector.</p>
-        </div>
-      
-        <div class="faq-item">
-          <h3>Is Bitcoin safe and legal?</h3>
-          <p>Bitcoin is legal in the United States and is becoming increasingly regulated. While it's a secure system by design, users must take precautions to protect their digital assets, much like with traditional financial instruments. The Staunton Bitcoin Alliance is committed to providing education on best practices for safe Bitcoin usage.</p>
-        </div>
-      </section>
-
-      <section id="contact" class="container">
-        <h2>Join the Alliance!</h2>
-        <p>
-          Be part of Staunton's Bitcoin revolution! Whether you're a forward-thinking citizen, a daring business owner, or a visionary government official, your role in this digital gold rush awaits.
-        </p>
-        <a href="mailto:info@stauntonbitcoin.org" class="btn"
-          >Contact Us Now!</a
-        >
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <p class="bitcoin-address">
-          <span class="bitcoin-label">Contribute to our cause:</span>
-          <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un" class="address-link">bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un</a>
-        </p>
-        <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un" class="qr-link">
-          <img width="240" src="images/sva-btc-qr.png" alt="Bitcoin QR Code" />
-        </a>
-        <p>&copy; <span id="current-year">2024</span> Staunton Bitcoin Alliance. All rights reserved.</p>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+    <section id="abstract" class="container">
+      <h2>Abstract</h2>
+      <p>
+        The Staunton Bitcoin Alliance proposes a system for widespread Bitcoin adoption in Staunton, Virginia,
+        leveraging the existing peer-to-peer electronic cash system to create a localized economy powered by digital
+        gold. This initiative outlines the structure of the alliance and its three-pillar approach to integrating
+        Bitcoin into the fabric of Staunton's economic and social systems.
+      </p>
+    </section>
+
+    <section id="introduction" class="container">
+      <h2>1. Introduction</h2>
+      <p>
+        Bitcoin has emerged as a revolutionary form of digital currency, offering financial sovereignty and economic
+        efficiency. The Staunton Bitcoin Alliance aims to harness these benefits at a local level, transforming Staunton
+        into a beacon of Bitcoin innovation and adoption.
+      </p>
+    </section>
+
+    <section id="pillars" class="container">
+      <h2>2. The Three Pillars</h2>
+      <p>Our approach is based on three interconnected pillars:</p>
+      <h3>2.1 Citizens</h3>
+      <p>
+        We propose a robust educational framework to empower Staunton's residents with Bitcoin knowledge and skills.
+        This includes regular workshops and seminars, practical training on wallet management and transactions, and
+        community events to foster a local Bitcoin ecosystem.
+      </p>
+      <h3>2.2 Businesses</h3>
+      <p>
+        To catalyze Bitcoin adoption in the commercial sector, we outline integration strategies for local businesses,
+        point-of-sale solutions for Bitcoin transactions, and marketing support for Bitcoin-friendly establishments.
+      </p>
+      <h3>2.3 Government</h3>
+      <p>
+        Our plan for governmental integration includes educational programs for city officials, exploration of Bitcoin
+        for municipal treasury management, and development of Bitcoin-friendly local regulations.
+      </p>
+    </section>
+
+    <section id="network-effects" class="container">
+      <h2>3. Network Effects</h2>
+      <p>
+        We posit that the synergy between these three pillars will create powerful network effects, accelerating Bitcoin
+        adoption throughout Staunton.
+      </p>
+    </section>
+
+    <section id="privacy-security" class="container">
+      <h2>4. Privacy and Security</h2>
+      <p>
+        Leveraging Bitcoin's inherent security features, we propose additional measures to ensure the privacy and
+        security of Staunton's Bitcoin ecosystem.
+      </p>
+    </section>
+
+    <section id="incentives" class="container">
+      <h2>5. Incentives</h2>
+      <p>
+        We outline a system of incentives to encourage Bitcoin adoption, including discounts for Bitcoin transactions at
+        local businesses, rewards for citizen participation in educational programs, and recognition for businesses and
+        government entities leading in Bitcoin adoption.
+      </p>
+    </section>
+
+    <section id="municipal-treasury" class="container">
+      <h2>6. Municipal Bitcoin Treasury</h2>
+      <p>
+        We propose the integration of Bitcoin into Staunton's municipal treasury. This bold move would position Staunton
+        as a pioneer in governmental Bitcoin adoption, potentially leading to more efficient financial management and
+        increased economic opportunities for the city.
+      </p>
+    </section>
+
+    <section id="scalability" class="container">
+      <h2>7. Scalability</h2>
+      <p>
+        Our model is designed to be scalable, potentially serving as a blueprint for other municipalities seeking to
+        embrace Bitcoin.
+      </p>
+    </section>
+
+    <section id="vision" class="container">
+      <h2>8. Vision: Staunton as a Bitcoin Beacon</h2>
+      <p>
+        Imagine Staunton in 2030: A vibrant, economically thriving city where Bitcoin is seamlessly integrated into
+        daily life. The historic downtown buzzes with activity as tourists and locals alike use Bitcoin to shop, dine,
+        and enjoy cultural events. The Blackfriars Playhouse now accepts Bitcoin for tickets, attracting a new
+        generation of tech-savvy Shakespeare enthusiasts.
+      </p>
+      <p>
+        Local businesses flourish, free from the burden of high transaction fees. The Staunton Farmers' Market has
+        become a model of peer-to-peer commerce, with farmers and artisans accepting Bitcoin directly from customers.
+        The city's Innovation Hub has become a nationally recognized center for blockchain technology, attracting
+        startups and creating high-paying jobs.
+      </p>
+      <p>
+        Staunton's municipal services run more efficiently than ever, powered by Bitcoin's transparent and secure
+        network. The city's Bitcoin treasury has grown, funding improvements in infrastructure and education without
+        raising taxes. Staunton has become a beacon of financial innovation, drawing visitors and new residents from
+        across the country who are eager to be part of this ground-breaking experiment in local Bitcoin adoption.
+      </p>
+    </section>
+
+    <section id="conclusion" class="container">
+      <h2>9. Conclusion</h2>
+      <p>
+        The Staunton Bitcoin Alliance presents a comprehensive approach to local Bitcoin adoption, aiming to position
+        Staunton as a leader in the ongoing financial revolution. By embracing this innovative technology, we have the
+        opportunity to create a more prosperous, efficient, and forward-thinking community for generations to come.
+      </p>
+    </section>
+
+    <section id="references" class="container">
+      <h2>References</h2>
+      <p>
+        1. Nakamoto, S. (2008). <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Bitcoin: A Peer-to-Peer
+          Electronic Cash System.</a>
+      </p>
+    </section>
+
+    <section id="faq" class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Why Staunton?</h3>
+        <p><a href="https://www.ci.staunton.va.us/" target="_blank">Staunton, Virginia</a>, with its rich history and
+          vibrant culture, is the perfect backdrop for a Bitcoin revolution. Home to the world-renowned <a
+            href="https://en.wikipedia.org/wiki/American_Shakespeare_Center" target="_blank">American Shakespeare
+            Center's Blackfriars Playhouse</a>, Staunton embodies a unique blend of tradition and innovation. Our small
+          but engaged civic population fosters a strong sense of community, ideal for grassroots movements like the
+          Bitcoin Alliance. Moreover, Staunton's city motto, "Moderata Durant" (Moderation is Lasting), aligns
+          beautifully with Bitcoin's principles of steady, sustainable growth and long-term value preservation. By
+          embracing Bitcoin, Staunton continues its legacy of balancing historical significance with forward-thinking
+          progress.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is Bitcoin?</h3>
+        <p>Bitcoin is a decentralized digital currency that enables instant payments to anyone, anywhere in the world.
+          It operates on a peer-to-peer network without the need for intermediaries, using blockchain technology to
+          secure and verify all transactions.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I start using Bitcoin in Staunton?</h3>
+        <p>To start using Bitcoin in Staunton, you can attend one of our educational workshops to learn the basics, set
+          up a digital wallet, and discover local businesses that accept Bitcoin. You can also join our community events
+          to connect with other Bitcoin enthusiasts in the area.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How will Bitcoin benefit Staunton's economy?</h3>
+        <p>Bitcoin adoption can stimulate Staunton's economy by attracting tech-savvy tourists and businesses, reducing
+          transaction fees for local merchants, and positioning Staunton as a hub for financial innovation. It also has
+          the potential to enhance the city's treasury management and create new job opportunities in the blockchain
+          sector.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is Bitcoin safe and legal?</h3>
+        <p>Bitcoin is legal in the United States and is becoming increasingly regulated. While it's a secure system by
+          design, users must take precautions to protect their digital assets, much like with traditional financial
+          instruments. The Staunton Bitcoin Alliance is committed to providing education on best practices for safe
+          Bitcoin usage.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Join the Alliance!</h2>
+      <p>
+        Be part of Staunton's Bitcoin revolution! Whether you're a forward-thinking citizen, a daring business owner, or
+        a visionary government official, your role in this digital gold rush awaits.
+      </p>
+      <a href="mailto:info@stauntonbitcoin.org" class="btn">Contact Us Now!</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="bitcoin-address">
+        <span class="bitcoin-label">Contribute to our cause:</span>
+        <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un"
+          class="address-link">bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un</a>
+      </p>
+      <a href="bitcoin:bc1qwycg7t6sahugyec7wa9kwlvjee9unjnp7pc8un" class="qr-link">
+        <img width="240" src="images/sva-btc-qr.png" alt="Bitcoin QR Code" />
+      </a>
+      <p>&copy; <span id="current-year">2024</span> Staunton Bitcoin Alliance. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
