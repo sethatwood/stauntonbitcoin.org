@@ -51,39 +51,56 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--bitcoin-orange) 0%, #ffd700 100%);
+      background: var(--dark-blue);
       color: var(--white);
       text-align: center;
-      padding: 6rem 0;
+      padding: 4rem 0;
       position: relative;
       overflow: hidden;
-    }
-
-    .hero h1,
-    .hero h2 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      text-shadow: var(--text-shadow);
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      font-weight: 600;
-    }
-
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      text-shadow: var(--text-shadow);
     }
 
     .logo-container {
       margin-bottom: 2rem;
     }
 
-    .bitcoin-logo {
-      width: 160px;
-      height: 160px;
+    .sba-logo {
+      width: 400px;
+      height: 266px;
+      max-width: 90%;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      color: var(--bitcoin-orange);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: var(--white);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--white);
+      color: var(--bitcoin-orange);
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      background-color: var(--light-gray);
+      color: var(--dark-blue);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     #abstract,
@@ -112,54 +129,21 @@
       margin-bottom: 1rem;
     }
 
-    .btn {
-      display: inline-block;
-      background-color: var(--white);
-      color: var(--bitcoin-orange);
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn:hover {
+    #contact,
+    #faq {
       background-color: var(--light-gray);
       color: var(--dark-blue);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    #contact {
-      background-color: var(--light-gray);
-      color: var(--dark-blue);
-      text-align: center;
       padding: 4rem;
       border-radius: 15px;
       margin-top: 2rem;
     }
 
-    #contact h2 {
-      color: var(--dark-blue);
-    }
-
-    #contact p {
-      margin-bottom: 2rem;
-    }
-
-    #faq {
-      background-color: var(--light-gray);
-      padding: 2rem;
-      border-radius: 15px;
-      margin-top: 2rem;
+    #contact h2,
+    #faq h2 {
       color: var(--dark-blue);
     }
 
     #faq h2 {
-      color: var(--dark-blue);
       border-bottom: 2px solid var(--bitcoin-orange);
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
@@ -232,74 +216,29 @@
       transition: all 0.3s ease;
     }
 
+    #references a,
     #references a:hover,
     footer a:hover {
       color: var(--bitcoin-orange);
     }
 
     .contact-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
     }
+
     .contact-link {
       color: var(--bitcoin-orange);
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
+
     .contact-link:hover {
       color: var(--dark-blue);
-    }
-
-    .logo-container {
-      margin-bottom: 2rem;
-    }
-
-    .sba-logo {
-      width: 300px;
-      height: 200px;
-      max-width: 100%;
-    }
-
-    .hero h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-
-    .hero {
-      background: var(--dark-blue);
-      color: var(--white);
-      text-align: center;
-      padding: 4rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .logo-container {
-      margin-bottom: 2rem;
-    }
-
-    .sba-logo {
-      width: 400px;
-      height: 266px;
-      max-width: 90%;
-    }
-
-    .hero h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-top: 1rem;
-      color: var(--bitcoin-orange);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: var(--white);
     }
 
     @media (max-width: 768px) {
@@ -321,35 +260,9 @@
       }
     }
 
-    @media (max-width: 768px) {
-      .sba-logo {
-        width: 240px;
-        height: 160px;
-      }
-
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-    }
-
     @media (min-width: 1200px) {
       .address-link {
         font-size: 1.2rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-      }
-
-      .bitcoin-logo {
-        width: 160px;
-        height: 160px;
       }
     }
   </style>
@@ -368,7 +281,7 @@
               <text x="200" y="186" font-family="sans-serif" font-size="26" text-anchor="middle" fill="#ffffff">
                 STAUNTON BITCOIN ALLIANCE
               </text>
-              <line x1="93" y1="146" x2="307" y2="146" stroke="#ffffff" stroke-width="2"/>
+              <line x1="93" y1="146" x2="307" y2="146" stroke="#ffffff" stroke-width="2" />
             </svg>
           </div>
           <h2>A Peer-to-Peer Electronic Cash System for Local Adoption</h2>
@@ -556,7 +469,8 @@
       </p>
       <div class="contact-links">
         <a href="mailto:stauntonbitcoin@proton.me" class="contact-link">Contact Us: StauntonBitcoin@proton.me</a>
-        <a href="https://www.facebook.com/groups/stauntonbitcoin" target="_blank" rel="noopener noreferrer" class="contact-link">Join Our Facebook Group: Staunton Bitcoin Alliance</a>
+        <a href="https://www.facebook.com/groups/stauntonbitcoin" target="_blank" rel="noopener noreferrer"
+          class="contact-link">Join Our Facebook Group: Staunton Bitcoin Alliance</a>
       </div>
     </section>
   </main>
