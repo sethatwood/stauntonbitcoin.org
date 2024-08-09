@@ -237,18 +237,21 @@
       color: var(--bitcoin-orange);
     }
 
-    .cta-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
+    .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
     }
-    .cta-btn {
-      flex: 1;
-      min-width: 200px;
-      max-width: 300px;
-      text-align: center;
+    .contact-link {
+      color: var(--bitcoin-orange);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .contact-link:hover {
+      color: var(--dark-blue);
     }
 
     media (min-width: 1200px) {
@@ -464,9 +467,9 @@
         Be part of Staunton's Bitcoin revolution! Whether you're a forward-thinking citizen, a daring business owner, or
         a visionary government official, your role in this digital gold rush awaits.
       </p>
-      <div class="cta-container">
-        <a href="mailto:stauntonbitcoin@proton.me" class="btn cta-btn">Contact Us Now!<br>StauntonBitcoin@proton.me</a>
-        <a href="https://www.facebook.com/groups/stauntonbitcoin" target="_blank" rel="noopener noreferrer" class="btn cta-btn">Join Our Facebook Group<br>Staunton Bitcoin Alliance</a>
+      <div class="contact-links">
+        <a href="mailto:stauntonbitcoin@proton.me" class="contact-link">Contact Us: StauntonBitcoin@proton.me</a>
+        <a href="https://www.facebook.com/groups/stauntonbitcoin" target="_blank" rel="noopener noreferrer" class="contact-link">Join Our Facebook Group: Staunton Bitcoin Alliance</a>
       </div>
     </section>
   </main>
