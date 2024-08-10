@@ -17,7 +17,7 @@ The Staunton Bitcoin Alliance is a community initiative aimed at promoting Bitco
 
 - HTML5
 - CSS3
-- JavaScript (minimal usage for dynamic year in footer)
+- JavaScript
 
 ## Local Development
 
@@ -25,7 +25,7 @@ To run this website locally:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/staunton-bitcoin-alliance.git
+   git clone https://github.com/sethatwood/stauntonbitcoin.org.git
    ```
 2. Open the `index.html` file in your preferred web browser.
 
